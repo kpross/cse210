@@ -8,3 +8,7 @@ This repository contains the starter code for many different projects. They are 
 * `prepare` - Starter projects for each of the preparation Learning Activities.
 * `prove` - Starter projects for each of the prove Developer projects.
 * `final` - Starter projects for final project.
+
+
+This is the response to the assignment to show that the git system is working.
+Hooray it worked!
