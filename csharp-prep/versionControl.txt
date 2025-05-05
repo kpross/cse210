@@ -1,0 +1,13 @@
+Version Control is a method of monitering and tracking files and changes to those files over time. It also allows for colloboration between multiple individuals despite any difference in location or time. Through Version Control participants are able to see what changes have been made to the files, when those changes are made, as well as view older editions of those files.
+
+One of the main benifits to using Version Control is the ability to hold on to old files and data. This was touched on briefly during the explination of Version Control. When there are many collaborators in a project or even when working on a project solo, there will inevitably be some accidents. Perhaps an important file was accidentally deleted, perhaps a participant changed something important causing the rest of the project to halt. Using Version Control you can back up the data and bring back older forms of the files.
+
+For application, imagine that you are a participant on a team of game developers. This team comprises of freelance individuals that live all across the country. By using Version control each member can complete their own tasks without needing to relocate and all the files will update in real time without the need for an individual to spend time recieving and organizing data files.
+
+the main commands that would be used are
+git pull | this brings all the files from git to your location
+git add "file" | this grabs the file that you want to send back
+git commit -m"note" | This primes the update and allows you to make a note of what you have done
+git push | this sends the files back to github
+
+In conclusion the use of Version Control is an invaluable tool in development that allows for teams of people to seamlessly work together without the fear of data loss.
