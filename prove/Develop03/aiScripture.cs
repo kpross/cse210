@@ -3,7 +3,7 @@ using System.Collections.Generic; // Required for List<T>
 using System.Linq; // Required for LINQ methods like .Where() and .ToList()
 
 // -------------------------------------------
-// AI WAS USED TO HELP EDIT AND ANNOTATE CODE
+// AI GENERATED FOR EXAMPLE AND LEARNING
 // -------------------------------------------
 
 // The 'Scripture' class is responsible for managing a scripture reference

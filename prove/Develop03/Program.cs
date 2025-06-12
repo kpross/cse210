@@ -1,6 +1,7 @@
 using System;
+
 // -------------------------------------------
-// AI WAS USED TO HELP EDIT AND ANNOTATE CODE
+// AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
 // -------------------------------------------
 
 class Program

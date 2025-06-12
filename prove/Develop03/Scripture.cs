@@ -2,6 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq; // Needed for .Where() and .All()
 
+
+// -------------------------------------------
+// AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
+// -------------------------------------------
+
+
 public class Scripture
 {
     private Reference _reference;

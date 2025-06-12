@@ -1,4 +1,9 @@
 using System;
+
+// -------------------------------------------
+// AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
+// -------------------------------------------
+
 public class Reference
 {
     private string _book;

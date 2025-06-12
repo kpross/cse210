@@ -1,7 +1,7 @@
 using System;
 
 // -------------------------------------------
-// AI WAS USED TO HELP EDIT AND ANNOTATE CODE
+// AI GENERATED FOR EXAMPLE AND LEARNING
 // -------------------------------------------
 
 // The 'Word' class encapsulates a single word from a scripture and manages
