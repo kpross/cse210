@@ -1,5 +1,10 @@
 using System;
 
+// -------------------------------------------
+// AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
+// -------------------------------------------
+
+
 // Represents a single journal entry with a date and the entry text.
 public class Entry
 {

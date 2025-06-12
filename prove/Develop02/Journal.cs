@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic; // Required for List<T>
 using System.IO;                  // Required for File I/O (StreamWriter, StreamReader)
 
+// -------------------------------------------
+// AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
+// -------------------------------------------
+
+
 // Represents a journal containing a list of entries.
 public class Journal
 {
@@ -87,8 +92,8 @@ public class Journal
                     {
                         string date = parts[0];
                         // Reconstruct the full entry text in case it contained the separator character.
-                        string entryText = string.Join("|", parts, 1, parts.Length - 1); 
-                        
+                        string entryText = string.Join("|", parts, 1, parts.Length - 1);
+
                         // Create a new Entry object with the parsed data.
                         Entry loadedEntry = new Entry(date, entryText);
                         // Add the loaded entry to the journal's list.

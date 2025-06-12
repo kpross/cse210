@@ -1,6 +1,11 @@
 using System;
 using System.Collections.Generic; // Required for List<T>
 
+// -------------------------------------------
+// AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
+// -------------------------------------------
+
+
 // This class is responsible for generating random journal prompts.
 public class PromptGenerator
 {

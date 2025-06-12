@@ -8,6 +8,7 @@ using System.Linq; // Needed for .Where() and .All()
 // -------------------------------------------
 
 
+
 public class Scripture
 {
     private Reference _reference;

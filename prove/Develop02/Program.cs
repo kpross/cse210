@@ -1,6 +1,11 @@
 using System;
 using System.Collections.Generic; // Required for List<T>
 
+// -------------------------------------------
+// AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
+// -------------------------------------------
+
+
 // The main program class that orchestrates the Journal application.
 class Program
 {
