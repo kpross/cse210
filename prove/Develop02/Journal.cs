@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic; // Required for List<T>
-using System.IO;                  // Required for File I/O (StreamWriter, StreamReader)
+using System.Collections.Generic;
+using System.IO;                 
 
 // -------------------------------------------
 // AI WAS USED TO HELP CLEAN UP AND ANNOTATE CODE
@@ -44,74 +44,43 @@ public class Journal
     // Saves the current journal entries to a specified file.
     public void SaveToFile(string filename)
     {
-        try
+        using (StreamWriter outputFile = new StreamWriter(filename))
         {
-            // Create a new StreamWriter to write to the specified file.
-            // 'true' in StreamWriter constructor appends to the file, but we want to overwrite,
-            // so we'll just create a new one each time implicitly.
-            using (StreamWriter outputFile = new StreamWriter(filename))
+            foreach (Entry entry in _entries)
             {
-                // Optionally, save the owner's name as the first line (though not strictly required by problem)
-                // outputFile.WriteLine(_owner); 
-
-                // Iterate through each entry in the list.
-                foreach (Entry entry in _entries)
-                {
-                    // Write the savable string representation of each entry to the file.
-                    outputFile.WriteLine(entry.ToSavableString());
-                }
+                outputFile.WriteLine(entry.ToSavableString());
             }
+        }
             Console.WriteLine($"Journal saved successfully to '{filename}'.");
-        }
-        catch (Exception ex)
-        {
-            // Catch and display any errors that occur during file saving.
-            Console.WriteLine($"Error saving journal: {ex.Message}");
-        }
     }
 
     // Loads journal entries from a specified file, replacing current entries.
     public void LoadFromFile(string filename)
     {
-        try
-        {
-            // Clear any existing entries in the journal before loading new ones.
-            _entries.Clear();
 
-            // Create a new StreamReader to read from the specified file.
-            using (StreamReader inputFile = new StreamReader(filename))
+        _entries.Clear();
+        using (StreamReader inputFile = new StreamReader(filename))
             {
                 string line;
-                // Read lines from the file until the end.
+
                 while ((line = inputFile.ReadLine()) != null)
                 {
-                    // Split each line by the pipe '|' character.
+
                     string[] parts = line.Split('|');
-                    // Ensure the line has at least two parts (date and entry text).
+
                     if (parts.Length >= 2)
                     {
                         string date = parts[0];
-                        // Reconstruct the full entry text in case it contained the separator character.
+
                         string entryText = string.Join("|", parts, 1, parts.Length - 1);
 
-                        // Create a new Entry object with the parsed data.
                         Entry loadedEntry = new Entry(date, entryText);
-                        // Add the loaded entry to the journal's list.
+
                         _entries.Add(loadedEntry);
                     }
                 }
             }
             Console.WriteLine($"Journal loaded successfully from '{filename}'.");
-        }
-        catch (FileNotFoundException)
-        {
-            // Specific catch for when the file doesn't exist.
-            Console.WriteLine($"Error: File '{filename}' not found.");
-        }
-        catch (Exception ex)
-        {
-            // Generic catch for any other errors during file loading.
-            Console.WriteLine($"Error loading journal: {ex.Message}");
-        }
+        
     }
 }

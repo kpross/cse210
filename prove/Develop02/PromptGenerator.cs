@@ -17,7 +17,7 @@ public class PromptGenerator
     // Constructor for the PromptGenerator class.
     public PromptGenerator()
     {
-        // Initialize the list of prompts with at least five different questions.
+        // Initialize the list of prompts
         _prompts = new List<string>
         {
             "Who was the most interesting person I interacted with today?",
